@@ -1,4 +1,5 @@
 var video;
+var slider;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
@@ -6,12 +7,13 @@ video=this.document.querySelector("#player1")
 video.autoplay = false;
 video.loop= false;
 document.querySelector("#volume").innerHTML = slider.value + "%";
+slider = document.querySelector("#slider");
 });
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play()
-	document.querySelector("#volume").innerHTML= slider.value+ "%";
+	document.querySelector("#volume").innerHTML = slider.value + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
